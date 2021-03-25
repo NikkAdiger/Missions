@@ -1,0 +1,21 @@
+<div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="missions" class="nav-link">Missions</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="create" class="nav-link">Create</a>
+      </li>
+    </div>
+    <button (click)="logOut()" class="btn btn-info">Log out</button>>
+  </nav>
+
+  <div class="container mt-5">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <footer>
+    
+  </footer>
+</div>

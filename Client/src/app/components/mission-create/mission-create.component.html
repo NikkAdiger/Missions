@@ -1,0 +1,36 @@
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="key">Key</label>
+          <input
+            type="text"
+            class="form-control"
+            id="key"
+            required
+            [(ngModel)]="mission.key"
+            name="key"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="value">Value</label>
+          <input
+            class="form-control"
+            id="value"
+            required
+            [(ngModel)]="mission.value"
+            name="value"
+          />
+        </div>
+
+          <button *ngIf="isNew" (click)="createMission()" class="btn btn-success">Create</button> 
+          <button *ngIf="!isNew" (click)="updateMission()" class="btn btn-success">Update</button> 
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>You successfully created a mission!</h3>
+        <button class="btn btn-success" (click)="newMission()">New..</button>
+      </div>
+    </div>
+  </div>

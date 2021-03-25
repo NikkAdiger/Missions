@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-6" *ngFor="let mission of missions, let ind = index">
+    <div class="card text-center">
+      <div class="card-header">
+        <span>ID:  </span> <h5>{{ mission._id }}</h5>
+      </div>
+      <div class="card-body">
+        <span>Key:  </span> <h5>{{ mission.key }}</h5>
+        <span>Value:  </span> <h5>{{ mission.value | json }}</h5>
+      </div>
+      <div class="card-footer textdeleteMission-muted">
+        <button (click)="onDeleteMission(mission)" class="btn btn-danger">delete</button>
+        <button (click)="onEditMission(mission)"class="btn btn-success">edit</button>
+      </div>
+    </div>
+  </div>
+</div>
