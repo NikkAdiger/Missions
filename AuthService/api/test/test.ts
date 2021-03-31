@@ -4,8 +4,6 @@ import app from '../app';
 import 'chai/register-should';
 import { expect } from 'chai';
 
-import aes from '../middleware/aesEncryption';
-
 chai.use(chaiHttp);
 
 describe('Testing the mission endpoints:', () => {
